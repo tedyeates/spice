@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "cookingtime": 300,
+    "experience": 0.7,
+    "group": "dune",
+    "ingredient": {
+      "item": "spice:unrefined_spice"
+    },
+    "result": "spice:spice"
+  }

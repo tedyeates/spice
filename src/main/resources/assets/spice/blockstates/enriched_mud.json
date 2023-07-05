@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "spice:block/enriched_mud"
+        }
+    }
+}

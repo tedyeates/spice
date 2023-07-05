@@ -1,0 +1,30 @@
+{
+    "item.spice.spice": "Spice",
+    "item.spice.unrefined_spice": "Unrefined Spice",
+    "item.spice.spice_fiber": "Spice Fiber",
+
+    "block.spice.enriched_sand": "Enriched Sand",
+    "block.spice.enriched_mud": "Enriched Mud",
+    "block.spice.spice_block": "Block of Spice",
+    "block.spice.compressed_spice": "Compressed Spice",
+    "block.spice.spice_plastic": "Spice Plastic",
+
+    "itemGroup.spice": "Spice",
+
+    "description.spice.more_info": "Press SHIFT for more info",
+    "description.spice.sight": "Sight: Highlight important entities in your vicinity",
+    "effect.spice.regeneration": "Regeneration (0:30)",
+    "effect.spice.sight": "Sight (1:00)",
+    "effect.spice.addiction": "Addiction 💀 (10:00)",
+
+    "advancements.spice.spicey_sand.title": "Spicy Sand",
+    "advancements.spice.spicey_sand.description": "Find a desert, if only you could eat sand",
+    "advancements.spice.cooked_spice.title": "Red, White and Brown",
+    "advancements.spice.cooked_spice.description": "The true colors of freedom, dig up some Enriched Mud and put it on the barby",
+    "advancements.spice.enriched_mud.title": "Don't Drink and Minecraft",
+    "advancements.spice.enriched_mud.description": "Splash a block of Enriched Sand with water, then dig that spice",
+    "advancements.spice.iron_tools.title": "Diggy Diggy Hole",
+    "advancements.spice.iron_tools.description": "Craft an iron shovel, the spice won't dig itself",
+    "advancements.spice.water.title": "Water is Wet",
+    "advancements.spice.water.description": "Get a bottle of water, no one likes it dry"
+}

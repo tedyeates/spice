@@ -1,0 +1,21 @@
+{
+    "variants": {
+      "": [
+        {
+          "model": "spice:block/enriched_sand"
+        },
+        {
+          "model": "spice:block/enriched_sand",
+          "y": 90
+        },
+        {
+          "model": "spice:block/enriched_sand",
+          "y": 180
+        },
+        {
+          "model": "spice:block/enriched_sand",
+          "y": 270
+        }
+      ]
+    }
+  }

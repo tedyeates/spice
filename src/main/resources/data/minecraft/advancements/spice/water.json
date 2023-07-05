@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:glass_bottle"
+    },
+    "title": {
+      "translate": "advancements.spice.water.title"
+    },
+    "description": {
+      "translate":  "advancements.spice.water.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "frame": "task"
+  },
+  "parent": "spice/root",
+  "criteria": {
+    "water": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "potion": "minecraft:water"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["water"]
+  ]
+}

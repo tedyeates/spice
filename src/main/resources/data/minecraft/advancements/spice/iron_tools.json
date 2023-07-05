@@ -1,0 +1,36 @@
+{
+  "parent": "spice/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_shovel"
+    },
+    "title": {
+      "translate": "advancements.spice.iron_tools.title"
+    },
+    "description": {
+      "translate": "advancements.spice.iron_tools.description"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "frame": "task",
+    "background": "spice:textures/block/spice_block.png"
+  },
+  "criteria": {
+    "iron_shovel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_shovel"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["iron_shovel"]
+  ]
+}

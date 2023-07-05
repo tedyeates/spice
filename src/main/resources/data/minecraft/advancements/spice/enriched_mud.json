@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "spice:enriched_mud"
+    },
+    "title": {
+      "translate": "advancements.spice.enriched_mud.title"
+    },
+    "description": {
+      "translate": "advancements.spice.enriched_mud.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "spice/water",
+  "criteria": {
+    "wet_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spice:unrefined_spice"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["wet_sand"]
+  ]
+}

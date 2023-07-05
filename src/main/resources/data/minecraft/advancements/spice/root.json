@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "minecraft:desert": {
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "minecraft:desert"
+          }
+        }
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "spice:textures/block/spice_block.png",
+    "description": {
+      "translate": "advancements.spice.spicey_sand.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "spice:enriched_sand"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.spice.spicey_sand.title"
+    }
+  },
+  "requirements": [
+    [
+      "minecraft:desert"
+    ]
+  ]
+}
