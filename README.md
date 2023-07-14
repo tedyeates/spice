@@ -3,7 +3,7 @@ This is a Minecraft mod inspired by the book Dune. The mod focuses on harvesting
 
 ## Details
 Compatible with JEI and advancements should guide you through manufacturing Spice
-- Enriched Sand and Enriched Mud spawns naturally
+- Enriched Sand and Enriched Mud spawns naturally, sand and mud spawn at lower levels in deserts
 - Enriched Sand can be converted to Enriched Mud with a Water Bottle
 - Enriched Mud can be harvested with an Iron Shovel to obtain Unrefined Spice
 - Unrefined Spice can be blasted into Spice
