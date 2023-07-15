@@ -11,10 +11,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tedyeates.spice.block.ModBlocks;
 import net.tedyeates.spice.item.ModItems;
+import net.tedyeates.spice.effect.ModEffects;
 import net.tedyeates.spice.networking.ModMessages;
 import net.tedyeates.spice.world.feature.ModConfiguredFeatures;
 import net.tedyeates.spice.world.feature.ModPlaceFeatures;
-
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -25,18 +25,25 @@ public class Spice
   public static final String MOD_ID = "spice";
 
   // Configurable
-  public static final int SPICE_REGEN_SECONDS = 5;
-  public static final int SPICE_REGEN_LEVEL = 1;
+  public static final int SPICE_FOCUS_MINUTES = 3;
   public static final int SPICE_ABSORB_MINUTES = 2;
   public static final int SPICE_ABSORB_SECONDS = 30;
+  public static final int SPICE_REGEN_SECONDS = 5;
+  
+  public static final int SPICE_REGEN_LEVEL = 1;
   public static final int SPICE_ABSORB_LEVEL = 1;
+  
   public static final float ADDICTION_CHANCE = 0.6F;
+
+  public static final int SPICE_FOCUS_RADIUS = 10;
 
   public static final int SECOND_TICKS = 20;
   public static final int MINUTE_SECONDS = 60;
 
+  public static final int SPICE_FOCUS_TIME = 
+    SPICE_FOCUS_MINUTES * MINUTE_SECONDS *  SECOND_TICKS;
   public static final int SPICE_REGEN_TIME = 
-    SPICE_REGEN_SECONDS * Spice.SECOND_TICKS;
+    SPICE_REGEN_SECONDS * SECOND_TICKS;
   public static final int SPICE_ABSORB_TIME = 
     SPICE_ABSORB_MINUTES * MINUTE_SECONDS * SECOND_TICKS + 
     SPICE_ABSORB_SECONDS * SECOND_TICKS;
@@ -50,6 +57,8 @@ public class Spice
 
     ModItems.register(modEventBus);
     ModBlocks.register(modEventBus);
+
+    ModEffects.register(modEventBus);
 
     ModConfiguredFeatures.register(modEventBus);
     ModPlaceFeatures.register(modEventBus);

@@ -25,7 +25,7 @@ public class PlayerWithdrawal {
   private int withdrawal = maxWithdrawal;
   private int withdrawalTimer = 0;
 
-  private boolean isAddicted = false;
+  private int addictionLevel = 0;
 
   
   public int getWithdrawal() {
@@ -34,7 +34,7 @@ public class PlayerWithdrawal {
 
 
   public void updateWithdrawal(int sub, Player player) {
-    if (!this.isAddicted) return;
+    if (this.addictionLevel < 1) return;
 
     applyWithdrawalEffect(withdrawal, player);
     if (this.withdrawal <= 0) return;
@@ -47,13 +47,6 @@ public class PlayerWithdrawal {
     
     this.withdrawal = Math.max(this.withdrawal - sub, MIN_WITHDRAWAL);
     this.withdrawalTimer = 0;
-    
-    player.sendSystemMessage(Component.literal(
-      "Subtracted Addiction"
-    ));
-    player.sendSystemMessage(Component.literal(
-      "Current addiction " + this.withdrawal
-    ));
 
     updateClient((ServerPlayer)player);
   }
@@ -62,15 +55,12 @@ public class PlayerWithdrawal {
   public void satisfyAddiction(LivingEntity player) {
     this.withdrawal = maxWithdrawal;
     this.withdrawalTimer = 0;
-    player.sendSystemMessage(Component.literal(
-      "Current Withdrawal " + this.withdrawal
-    ).withStyle(ChatFormatting.RED));
 
     if(
-      !this.isAddicted && 
+      this.addictionLevel < 1 && 
       player.level.random.nextFloat() <= Spice.ADDICTION_CHANCE
     ) {
-      this.isAddicted = true;
+      this.addictionLevel = 1;
     }
 
     updateClient((ServerPlayer)player);
@@ -78,7 +68,7 @@ public class PlayerWithdrawal {
 
 
   public void resetAddiction(Entity player) {
-    this.isAddicted = false;
+    this.addictionLevel = 0;
     this.withdrawal = maxWithdrawal;
     withdrawalTimer = 0;
     updateClient((ServerPlayer)player);
@@ -93,7 +83,7 @@ public class PlayerWithdrawal {
   private void updateClient(ServerPlayer player){
     // Updates HUD bar
     ModMessages.sendToPlayer(
-      new WithdrawalDataSyncS2CPacket(withdrawal), 
+      new WithdrawalDataSyncS2CPacket(withdrawal, addictionLevel), 
       player
     );
   }
@@ -115,30 +105,33 @@ public class PlayerWithdrawal {
     switch(withdrawal) {
       case 0:
       case 1:
-      applyEffect(player, MobEffects.WITHER,  3);
+        applyEffect(player, MobEffects.WITHER,  3);
         break;
-        case 2:
+      case 2:
         applyEffect(player, MobEffects.BLINDNESS, 0);
       case 4:
         applyEffect(player, MobEffects.CONFUSION, 0);
-        case 6:
+      case 6:
         applyEffect(player, MobEffects.HUNGER, 0);
         break;
-        default:
+      default:
         break;
       }
     }
 
     
   public void copyFrom(PlayerWithdrawal source) {
-      this.withdrawal = source.withdrawal;
-    }
+    this.withdrawal = source.withdrawal;
+    this.addictionLevel = source.addictionLevel;
+  }
     
-    public void saveNBTData(CompoundTag nbt) {
-      nbt.putInt("addiction", withdrawal);
-    }
-    
-    public void loadNBTData(CompoundTag nbt) {
-      withdrawal = nbt.getInt("addiction");
-    }
+  public void saveNBTData(CompoundTag nbt) {
+    nbt.putInt("withdrawal", withdrawal);
+    nbt.putInt("addictionLevel", addictionLevel);
+  }
+  
+  public void loadNBTData(CompoundTag nbt) {
+    this.withdrawal = nbt.getInt("withdrawal");
+    this.addictionLevel = nbt.getInt("addictionLevel");
+  }
 }

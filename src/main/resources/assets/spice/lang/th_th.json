@@ -6,14 +6,22 @@
   "block.spice.enriched_sand": "ทรายคลุก",
   "block.spice.enriched_mud": "โคลนคลุก",
   "block.spice.spice_block": "บล็อกทราย",
-  "block.spice.compressed_spice": "เครื่องเทศบีบอัด",
-  "block.spice.spice_plastic": "เครื่องเทศพลาสติก",
 
   "itemGroup.spice": "เครื่องเทศ",
 
   "description.spice.more_info": "กด SHIFT เพื่อข้อมูลเพิ่มเติม",
-  "description.spice.sight": "การเห็น: เน้นสิ่งที่สำคัญ",
-  "effect.spice.regeneration": "ฟื้นฟูต่อเนื่อง (0:30)",
-  "effect.spice.sight": "การเห็น (1:00)",
-  "effect.spice.addiction": "ติดยาเสพติด 💀 (10:00)"
+  "description.spice.focus": "เน้น: ทำม็อบใกล้เรืองแสง",
+  "effects.spice.regeneration": "ฟื้นฟูต่อเนื่อง",
+  "effects.spice.focus": "เน้น",
+
+  "advancements.spice.spicey_sand.title": "ทรายเผ็ด",
+  "advancements.spice.spicey_sand.description": "หาทะเลทราย น่าเศร้าที่คุณไม่กินทรายได้",
+  "advancements.spice.cooked_spice.title": "แดง ขาว และน้ำตาล",
+  "advancements.spice.cooked_spice.description": "สีแห่งเสรีภาพ, ขุดโคลนคลุกและวางไว้บนบาร์บีคิว",
+  "advancements.spice.enriched_mud.title": "อย่าดื่มสุราและ Minecraft",
+  "advancements.spice.enriched_mud.description": "แช่บโคลนคลุกด้วยน้ำ ขุดเครื่องเทศ",
+  "advancements.spice.iron_tools.title": "Diggy Diggy Hole",
+  "advancements.spice.iron_tools.description": "ทำพลั่วเหล็ก เครื่องเทศจะไม่ขุดเอง",
+  "advancements.spice.water.title": "น้ำเป็นเปียก",
+  "advancements.spice.water.description": "หาขวดน้ำ ไม่มีใครชอบมันแห้ง"
 }

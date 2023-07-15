@@ -6,16 +6,13 @@
     "block.spice.enriched_sand": "Enriched Sand",
     "block.spice.enriched_mud": "Enriched Mud",
     "block.spice.spice_block": "Block of Spice",
-    "block.spice.compressed_spice": "Compressed Spice",
-    "block.spice.spice_plastic": "Spice Plastic",
 
     "itemGroup.spice": "Spice",
 
     "description.spice.more_info": "Press SHIFT for more info",
-    "description.spice.sight": "Sight: Highlight important entities in your vicinity",
-    "effect.spice.regeneration": "Regeneration (0:30)",
-    "effect.spice.sight": "Sight (1:00)",
-    "effect.spice.addiction": "Addiction 💀 (10:00)",
+    "description.spice.focus": "Focus: Make nearby entities glow",
+    "effects.spice.regeneration": "Regeneration",
+    "effects.spice.focus": "Focus",
 
     "advancements.spice.spicey_sand.title": "Spicy Sand",
     "advancements.spice.spicey_sand.description": "Find a desert, if only you could eat sand",

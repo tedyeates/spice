@@ -35,16 +35,16 @@ public class WithdrawalHudOverlay {
     Minecraft minecraft = gui.getMinecraft();
     Player player = (Player) minecraft.getCameraEntity();
 
+    int withdrawal = ClientWithdrawalData.getPlayerWithdrawal();
+    int addictionLevel = ClientWithdrawalData.getPlayerAddictionLevel();
     boolean hideGui = minecraft.options.hideGui;
-    if (!hideGui && gui.shouldDrawSurvivalElements()) {
+    if (!hideGui && gui.shouldDrawSurvivalElements() && addictionLevel > 0) {
       minecraft.getProfiler().push("withdrawal");
       RenderSystem.enableBlend();
       int left = width / 2 + 80;
       int top = height - gui.rightHeight;
       int y = top;
       gui.rightHeight += 10;
-
-      int withdrawal = ClientWithdrawalData.getPlayerWithdrawal();
 
       gui.setupOverlayRenderState(true, false, EMPTY_WITHDRAWAL);
       for(int i = 0; i < 10; i++) {

@@ -8,8 +8,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.tedyeates.spice.Spice;
 import net.tedyeates.spice.withdrawal.PlayerWithdrawalProvider;
 
 public class SpiceItem extends Item {
@@ -25,6 +27,8 @@ public class SpiceItem extends Item {
     LivingEntity pLivingEntity
   ) {
     if (!pLivingEntity.level.isClientSide()) {
+      ItemStack milkStack = new ItemStack(Items.MILK_BUCKET);
+      pLivingEntity.curePotionEffects(milkStack);
       pLivingEntity.getCapability(
         PlayerWithdrawalProvider.PLAYER_WITHDRAWAL
       ).ifPresent(withdrawal -> {
@@ -35,6 +39,7 @@ public class SpiceItem extends Item {
     return super.finishUsingItem(itemStack, level, pLivingEntity);
   }
 
+
   @Override
   public void appendHoverText(
     ItemStack stack, 
@@ -44,7 +49,7 @@ public class SpiceItem extends Item {
   ) {
     if(Screen.hasShiftDown()) {
       components.add(Component
-        .translatable("description.spice.sight")
+        .translatable("description.spice.focus")
         .withStyle(ChatFormatting.BLUE)
       );
     } else {
@@ -53,13 +58,35 @@ public class SpiceItem extends Item {
         .withStyle(ChatFormatting.DARK_RED)
         .withStyle(ChatFormatting.ITALIC)
       );
+
       components.add(Component
-        .translatable("effect.spice.regeneration")
+        .translatable("effect.minecraft.regeneration")
         .withStyle(ChatFormatting.BLUE)
+        .append(
+          Component
+            .literal(" (0:" + Spice.SPICE_REGEN_SECONDS + ")")
+            .withStyle(ChatFormatting.BLUE)
+        )
       );
+
       components.add(Component
-        .translatable("effect.spice.sight")
+        .translatable("effect.minecraft.absorption")
         .withStyle(ChatFormatting.BLUE)
+        .append(
+          Component
+            .literal(" (" + Spice.SPICE_ABSORB_MINUTES + ":" + Spice.SPICE_ABSORB_SECONDS + ")")
+            .withStyle(ChatFormatting.BLUE)
+        )
+      );
+
+      components.add(Component
+        .translatable("effects.spice.focus")
+        .withStyle(ChatFormatting.BLUE)
+        .append(
+          Component
+            .literal(" (" + Spice.SPICE_FOCUS_MINUTES + ":00)")
+            .withStyle(ChatFormatting.BLUE)
+        )
       );
     }
 

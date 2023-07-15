@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tedyeates.spice.Spice;
+import net.tedyeates.spice.effect.ModEffects;
 import net.tedyeates.spice.item.custom.SpiceItem;
 
 public class ModItems {
@@ -32,6 +33,10 @@ public class ModItems {
     .effect(Suppliers.memoize(() -> new MobEffectInstance(
       MobEffects.ABSORPTION, 
       Spice.SPICE_ABSORB_TIME
+    )), 1.0F)
+    .effect(Suppliers.memoize(() -> new MobEffectInstance(
+      ModEffects.FOCUS.get(), 
+      Spice.SPICE_FOCUS_TIME
     )), 1.0F)
     .build();
 
