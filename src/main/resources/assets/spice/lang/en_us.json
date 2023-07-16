@@ -5,6 +5,8 @@
 
     "block.spice.enriched_sand": "Enriched Sand",
     "block.spice.enriched_mud": "Enriched Mud",
+    "block.spice.iron_mud_ore": "Mud Iron Ore",
+    "block.spice.iron_sand_ore": "Sand Iron Ore",
     "block.spice.spice_block": "Block of Spice",
 
     "itemGroup.spice": "Spice",

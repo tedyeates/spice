@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+      "spice:iron_mud_ore",
+      "spice:iron_sand_ore"
+  ]
+}

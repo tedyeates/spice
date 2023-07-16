@@ -5,6 +5,8 @@
 
   "block.spice.enriched_sand": "ทรายคลุก",
   "block.spice.enriched_mud": "โคลนคลุก",
+  "block.spice.iron_mud_ore": "โคลนแร่เหล็ก",
+  "block.spice.iron_sand_ore": "ทรายแร่เหล็ก",
   "block.spice.spice_block": "บล็อกทราย",
 
   "itemGroup.spice": "เครื่องเทศ",

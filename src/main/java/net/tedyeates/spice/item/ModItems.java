@@ -1,7 +1,5 @@
 package net.tedyeates.spice.item;
 
-import java.util.function.Supplier;
-
 import com.google.common.base.Suppliers;
 
 import net.minecraft.world.effect.MobEffectInstance;

@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "spice:enriched_sand"
+        "spice:enriched_sand",
+        "spice:iron_sand_ore"
     ]
 }

@@ -14,7 +14,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tedyeates.spice.Spice;
+import net.tedyeates.spice.block.custom.EnrichedMud;
 import net.tedyeates.spice.block.custom.EnrichedSand;
+import net.tedyeates.spice.block.custom.IronOreMud;
+import net.tedyeates.spice.block.custom.IronOreSand;
 import net.tedyeates.spice.item.ModCreativeModeTab;
 import net.tedyeates.spice.item.ModItems;
 
@@ -35,13 +38,35 @@ public class ModBlocks {
 
   public static final RegistryObject<Block> ENRICHED_MUD = registerBlock(
     "enriched_mud",
-    () -> new Block(
+    () -> new EnrichedMud(
       BlockBehaviour.Properties.of(Material.CLAY)
         .strength(1f).requiresCorrectToolForDrops()
         .sound(SoundType.MUD)
     ), 
     ModCreativeModeTab.SPICE_TAB
   );
+
+
+  public static final RegistryObject<Block> IRON_MUD_ORE = registerBlock(
+    "iron_mud_ore",
+    () -> new IronOreMud(
+      BlockBehaviour.Properties.of(Material.CLAY)
+        .strength(1f).requiresCorrectToolForDrops()
+        .sound(SoundType.MUD)
+    ), 
+    ModCreativeModeTab.SPICE_TAB
+  );
+
+  public static final RegistryObject<Block> IRON_SAND_ORE = registerBlock(
+    "iron_sand_ore",
+    () -> new IronOreSand(
+      BlockBehaviour.Properties.of(Material.SAND)
+        .strength(1f).requiresCorrectToolForDrops()
+        .sound(SoundType.MUD)
+    ), 
+    ModCreativeModeTab.SPICE_TAB
+  );
+
 
   public static final RegistryObject<Block> SPICE_BLOCK = registerBlock(
     "spice_block",
