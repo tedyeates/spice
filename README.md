@@ -1,4 +1,4 @@
-[!Dune - Spice](screenshots/mod_title.png)
+![Dune - Spice](screenshots/mod_title.png)
 This is a Minecraft mod inspired by the book Dune. The mod focuses on harvesting and processing Spice. Currently for 1.19.2.
 Spice spawns in the desert and it is recommended to play in a desert only world (with additional desert survival mods)
 
