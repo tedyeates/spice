@@ -22,7 +22,7 @@ There is a chance of becoming addicted when consuming spice, if you do not consu
 - Blindness
 - Death
 
-### Benifitial Effects
+### Beneficial Effects
 - Regeneration
 - Absorbtion
 - Focus - This applies glowing to nearby entities
