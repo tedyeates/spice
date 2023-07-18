@@ -147,7 +147,7 @@ public class ModEvents {
         player.getCapability(
           PlayerWithdrawalProvider.PLAYER_WITHDRAWAL
         ).ifPresent(withdrawal -> {
-          withdrawal.resetAddiction(player);
+          withdrawal.updateClient((ServerPlayer)player);
         });
       }
     }

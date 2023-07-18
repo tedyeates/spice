@@ -80,7 +80,7 @@ public class PlayerWithdrawal {
   }
 
   
-  private void updateClient(ServerPlayer player){
+  public void updateClient(ServerPlayer player){
     // Updates HUD bar
     ModMessages.sendToPlayer(
       new WithdrawalDataSyncS2CPacket(withdrawal, addictionLevel), 
