@@ -5,26 +5,42 @@ Spice spawns in the desert and it is recommended to play in a desert only world 
 Release to CurseForge Coming Soon...
 
 ## Details
-- Enriched Sand and Enriched Mud spawns naturally and spawn in their respective geodes
-- Enriched Sand can be converted to Enriched Mud with a Water Bottle
-- Enriched Mud can be harvested with an Iron Shovel to obtain Unrefined Spice
-- Unrefined Spice can be blasted into Spice
-- Spice can be eaten to obtain
-  - Regeneration
-  - Absorbtion
-  - Focus - This applies glowing to nearby entities
-- There is a chance of becoming addicted, you will see a new spice bar when this occurs this will result in increasingly bad effects occuring until you satisfy the addiction
+In game advancements will walk you through the harvesting and production of spice
+
+Enriched Sand and Mud spawn in geodes as well as two new iron ore variations
+![Spice Sand Geode](screenshots/spice_geode.png) ![Spice Mud Geode](screenshots/spice_mud_geode.png)
+
+Unrefined Spice can be made into Spice using a blast furnace
+
+### Addiction
+There is a chance of becoming addicted when consuming spice, if you do not consume spice this will worsen and lead to increasingly bad effects.
+![Addiction Bar](screenshots/spice_addiction_updscale.png)
+- Nasuea
+- Blindness
+- Death
+
+### Benifitial Effects
+- Regeneration
+- Absorbtion
+- Focus - This applies glowing to nearby entities
+
+### Language Support
+- English
+- Thai
+
+Language contributions are welcome
+
 
 ## Future Plans
-### Untested but Planned
+### Untested
 - Server support
-- JEI integration
 
 ### This Mod
 - Dynamic Addiction (Get more or less addicted based on how much you take)
 - Blue vision and prescience visions at higher addiction levels
 - Addiction and spice effects from sand storms and food when in the desert
 - Update to 1.20
+- More Create support (Currently washing can be used to automate spice production)
 - No backporting planned
 
 ### Other Mods
