@@ -26,15 +26,17 @@ public class ModItems {
     .effect(Suppliers.memoize(() -> new MobEffectInstance(
       MobEffects.REGENERATION, 
       Spice.SPICE_REGEN_TIME,
-      1
+      Spice.SPICE_REGEN_LEVEL
     )), 1.0F)
     .effect(Suppliers.memoize(() -> new MobEffectInstance(
       MobEffects.ABSORPTION, 
-      Spice.SPICE_ABSORB_TIME
+      Spice.SPICE_ABSORB_TIME,
+      Spice.SPICE_ABSORB_LEVEL
     )), 1.0F)
     .effect(Suppliers.memoize(() -> new MobEffectInstance(
       ModEffects.FOCUS.get(), 
-      Spice.SPICE_FOCUS_TIME
+      Spice.SPICE_FOCUS_TIME,
+      Spice.SPICE_FOCUS_LEVEL
     )), 1.0F)
     .build();
 

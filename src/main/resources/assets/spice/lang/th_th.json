@@ -14,7 +14,7 @@
   "description.spice.more_info": "กด SHIFT เพื่อข้อมูลเพิ่มเติม",
   "description.spice.focus": "เน้น: ทำม็อบใกล้เรืองแสง",
   "effects.spice.regeneration": "ฟื้นฟูต่อเนื่อง",
-  "effects.spice.focus": "เน้น",
+  "effect.spice.focus": "เน้น",
 
   "advancements.spice.spicey_sand.title": "ทรายเผ็ด",
   "advancements.spice.spicey_sand.description": "หาทะเลทราย น่าเศร้าที่คุณไม่กินทรายได้",

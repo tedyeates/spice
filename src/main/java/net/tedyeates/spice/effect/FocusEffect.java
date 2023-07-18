@@ -17,14 +17,15 @@ public class FocusEffect extends MobEffect {
         super(category, color);
     }
     
-    private void focus(LivingEntity pLivingEntity){
+    private void focus(LivingEntity pLivingEntity, int pAmplifier){
+        int amplifiedRadius = Spice.SPICE_FOCUS_RADIUS * (pAmplifier + 1);
         AABB playerAoe = new AABB(
-            pLivingEntity.getX() - Spice.SPICE_FOCUS_RADIUS, 
-            pLivingEntity.getY() - Spice.SPICE_FOCUS_RADIUS,
-            pLivingEntity.getZ() - Spice.SPICE_FOCUS_RADIUS,
-            pLivingEntity.getX() + Spice.SPICE_FOCUS_RADIUS,
-            pLivingEntity.getY() + Spice.SPICE_FOCUS_RADIUS,
-            pLivingEntity.getZ() + Spice.SPICE_FOCUS_RADIUS
+            pLivingEntity.getX() - amplifiedRadius, 
+            pLivingEntity.getY() - amplifiedRadius,
+            pLivingEntity.getZ() - amplifiedRadius,
+            pLivingEntity.getX() + amplifiedRadius,
+            pLivingEntity.getY() + amplifiedRadius,
+            pLivingEntity.getZ() + amplifiedRadius
         );
 
         TargetingConditions targeting = TargetingConditions.forNonCombat().ignoreInvisibilityTesting();
@@ -47,7 +48,7 @@ public class FocusEffect extends MobEffect {
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
         if (!pLivingEntity.level.isClientSide()) {
-            focus(pLivingEntity);
+            focus(pLivingEntity, pAmplifier);
         }
 
         super.applyEffectTick(pLivingEntity, pAmplifier);

@@ -32,10 +32,11 @@ public class Spice
   
   public static final int SPICE_REGEN_LEVEL = 1;
   public static final int SPICE_ABSORB_LEVEL = 1;
+  public static final int SPICE_FOCUS_LEVEL = 2;
   
   public static final float ADDICTION_CHANCE = 0.6F;
 
-  public static final int SPICE_FOCUS_RADIUS = 10;
+  public static final int SPICE_FOCUS_RADIUS = 5;
 
   public static final int SECOND_TICKS = 20;
   public static final int MINUTE_SECONDS = 60;

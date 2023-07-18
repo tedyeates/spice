@@ -35,7 +35,7 @@ public class ModPlaceFeatures {
       () -> new PlacedFeature(
         ModConfiguredFeatures.SPICE_MUD_GEODE.getHolder().get(), 
         List.of(
-          RarityFilter.onAverageOnceEvery(24), // Chance of geode placed
+          RarityFilter.onAverageOnceEvery(20), // Chance of geode placed
           InSquarePlacement.spread(),
           HeightRangePlacement.uniform(
             VerticalAnchor.aboveBottom(6), 
@@ -52,7 +52,7 @@ public class ModPlaceFeatures {
       () -> new PlacedFeature(
         ModConfiguredFeatures.SPICE_GEODE.getHolder().get(), 
         List.of(
-          RarityFilter.onAverageOnceEvery(15), // Chance of geode placed
+          RarityFilter.onAverageOnceEvery(12), // Chance of geode placed
           InSquarePlacement.spread(),
           HeightRangePlacement.uniform(
             VerticalAnchor.aboveBottom(20), 

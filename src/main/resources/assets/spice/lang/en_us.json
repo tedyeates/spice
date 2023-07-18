@@ -14,7 +14,7 @@
     "description.spice.more_info": "Press SHIFT for more info",
     "description.spice.focus": "Focus: Make nearby entities glow",
     "effects.spice.regeneration": "Regeneration",
-    "effects.spice.focus": "Focus",
+    "effect.spice.focus": "Focus",
 
     "advancements.spice.spicey_sand.title": "Spicy Sand",
     "advancements.spice.spicey_sand.description": "Find a desert, if only you could eat sand",

@@ -59,12 +59,17 @@ public class SpiceItem extends Item {
         .withStyle(ChatFormatting.ITALIC)
       );
 
+      String regenSeconds = String.valueOf(Spice.SPICE_REGEN_SECONDS);
+      if (Spice.SPICE_REGEN_SECONDS < 10) {
+        regenSeconds = "0" + regenSeconds;
+      }
+
       components.add(Component
         .translatable("effect.minecraft.regeneration")
         .withStyle(ChatFormatting.BLUE)
         .append(
           Component
-            .literal(" (0:" + Spice.SPICE_REGEN_SECONDS + ")")
+            .literal(" (0:" + regenSeconds + ")")
             .withStyle(ChatFormatting.BLUE)
         )
       );
@@ -80,7 +85,7 @@ public class SpiceItem extends Item {
       );
 
       components.add(Component
-        .translatable("effects.spice.focus")
+        .translatable("effect.spice.focus")
         .withStyle(ChatFormatting.BLUE)
         .append(
           Component
