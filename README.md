@@ -2,7 +2,7 @@
 This is a Minecraft mod inspired by the book Dune. The mod focuses on harvesting and processing Spice. 
 **Supports**: 1.19.2
 
-Release to CurseForge Coming Soon...
+[Curseforge Download](https://www.curseforge.com/minecraft/mc-mods/dune-x-spice)
 
 ## Details
 In game advancements will walk you through the harvesting and production of spice.
